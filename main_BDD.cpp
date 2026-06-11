@@ -7,8 +7,16 @@
 #include "repositories/IndividuSQL.h"
 #include "repositories/PhotoSQL.h"
 
-const std::string CHEMIN_IMAGES    = "/home/cytech/ING1/Projet_Reconnaissance_Faciale/Image/";
-const std::string CHEMIN_DOWNLOADS = "/data/CYTECHDATA/Downloads/";
+
+#include <cstdlib>
+#include <string>
+
+void telechargerImage(const std::string& nomFichier) {
+    std::string url = "https://raw.githubusercontent.com/ElPatronito/Projet-reconnaissance-faciale---MF/main/Image/" + nomFichier;
+    std::string cmd = "wget -q -O /tmp/" + nomFichier + " \"" + url + "\"";
+    system(cmd.c_str());
+}
+const std::string CHEMIN_IMAGE    = "https://raw.githubusercontent.com/ElPatronito/Projet-reconnaissance-faciale---MF/main/Image/";
 
 // ── Lecture d'une ligne complète (gère les espaces et le buffer) ─────
 std::string lireLigne(const std::string& invite) {
