@@ -26,8 +26,8 @@ int main(int argc, char* argv[]){
 
     vector<string> nomsClasses;
 
-    string cheminImages = "..∕Image";
-    string dossierTests = "../ImagesTest";
+    string cheminImages = "/tmp/projet_images/";
+    string dossierTests = "/tmp/projet_images/";
 
     Preprocesseur prep(128);
 
@@ -36,7 +36,7 @@ int main(int argc, char* argv[]){
     prep.chargerDossier(cheminImages);
 
     // Récupération automatique des noms de classes depuis les dossiers.
-    nomsClasses = prep.getNomsClasses();
+    nomsClasses = prep.getLabels();
 
     vector<string> nomsImages = prep.getLabels();
 

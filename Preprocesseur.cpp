@@ -1,12 +1,15 @@
 #include "Preprocesseur.h"
 #include <iostream>
 
+using namespace std;
 //constructeur
 Preprocesseur::Preprocesseur(int taille) : taille(taille) {}
 
 
 
 cv::Mat Preprocesseur::pretraiterImage(const cv::Mat& img) {
+
+    cout << "VERSION LOIC PREPROCESSEUR" << endl;
 
     cv::Mat gris, egalise, redim, flottant, vecteur;
 

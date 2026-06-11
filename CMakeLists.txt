@@ -8,16 +8,16 @@ find_package(OpenCV REQUIRED)
 qt_standard_project_setup()
 
 qt_add_executable(mon_app
-    main.cpp
+    mainIHM.cpp
     mainwindow.cpp
     mainwindow.h
-    RecognitionPipeline.cpp
+    Reco.cpp
     RecognitionPipeline.h
     PCA.cpp
     PCA.h
     LDA.cpp
     LDA.h
-    Preprocesseur.cpp
+    Prep.cpp
     Preprocesseur.h
 )
 
